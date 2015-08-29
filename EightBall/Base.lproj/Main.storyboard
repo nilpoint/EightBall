@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="EightBall" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,47 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eight-ball" translatesAutoresizingMaskIntoConstraints="NO" id="lRY-c4-YNE">
+                                <rect key="frame" x="140" y="140" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="M0q-3M-htt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="kj8-NK-u2m"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="mTP-43-Bzb"/>
+                                    <constraint firstAttribute="height" constant="320" id="sG1-Vx-iSZ"/>
+                                </constraints>
+                            </imageView>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dok-xt-Qrm">
+                                <rect key="frame" x="220" y="244" width="160" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="5x1-g1-EWD"/>
+                                    <constraint firstAttribute="width" constant="160" id="kQc-wc-cd6"/>
+                                </constraints>
+                                <string key="text">SHAKE
+FOR
+ANSWER</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="dok-xt-Qrm" secondAttribute="centerX" id="4M9-PN-ROZ"/>
+                            <constraint firstAttribute="centerY" secondItem="dok-xt-Qrm" secondAttribute="centerY" id="XiZ-r3-WSp"/>
+                            <constraint firstAttribute="centerX" secondItem="lRY-c4-YNE" secondAttribute="centerX" id="d0w-xw-E0u"/>
+                            <constraint firstAttribute="centerY" secondItem="lRY-c4-YNE" secondAttribute="centerY" id="swq-mw-ckA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerView" destination="dok-xt-Qrm" id="fea-kk-We6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="eight-ball" width="320" height="320"/>
+    </resources>
 </document>
